@@ -1,27 +1,35 @@
 <template>
   <div class="wrap">
+    <div class="pos"></div>
     <div class="index">
       <index-header></index-header>
       <div class="content">
-        <div class="con-swiper"></div>
-          <index-layout></index-layout>
-          <div class="layout-bottom"></div>
-        </div>
-        <div class="con-global"></div>
-        <div class="con-Architecture"></div>
+        <index-swiper></index-swiper>
+        <index-layout></index-layout>
+        <index-global></index-global>
+        <index-arch></index-arch>
       </div>
-      <footer class="foot">这里是底部</footer>
+      <index-footer></index-footer>
     </div>
+  </div>
 </template>
 
 <script>
 import IndexHeader from './computed/head'
 import IndexLayout from './computed/layout'
+import IndexGlobal from './computed/global'
+import IndexArch from './computed/arch'
+import IndexFooter from './computed/footer'
+import IndexSwiper from './computed/swiper'
 export default {
   name:'Home',
   components:{
     IndexHeader,
-    IndexLayout
+    IndexLayout,
+    IndexGlobal,
+    IndexArch,
+    IndexFooter,
+    IndexSwiper
   }
 }
 </script>
@@ -29,7 +37,17 @@ export default {
   .wrap{
     width: 100%;
     overflow: hidden;
-    background: #343434;
+    position: relative;
+    background: #3b3b3b;
+    .pos{
+      width: 100%;
+      height: 346px;
+      position: absolute;
+      left: 700px;
+      top: 120px;
+      background: url(../../assets/imgs/NAIL.png) no-repeat;
+      background-size: 1100px 346px;
+    }
     .index{
       width: 1500px;
       height: 100%;
@@ -37,31 +55,7 @@ export default {
       margin: 0 auto;
       .content{
         width: 100%;
-        .con-swiper{
-          width: 100%;
-          height: 508px;
-          padding:  0 60px;
-          box-sizing: border-box;
-          background: yellow;
-        }
-        .con-global{
-          width: 100%;
-          height: 590px;
-          background: #323232;
-        }
-        .con-Architecture{
-          width: 100%;
-          height: 790px;
-          background: #fff;
-        }
       }
-    }
-    .foot{
-      width: 1500px;
-      height: 263px;
-      background: #343434;
-      margin: 0 auto;
-      color: #fff;
     }
   }
 </style>
