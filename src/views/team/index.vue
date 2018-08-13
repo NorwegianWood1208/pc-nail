@@ -1,13 +1,11 @@
 <template>
-  <div class="wrap">
+  <div class="team-wrap">
     <div class="pos"></div>
     <div class="index">
       <index-header></index-header>
       <div class="content">
-        <index-swiper></index-swiper>
-        <index-layout></index-layout>
-        <index-global></index-global>
-        <index-arch></index-arch>
+        <team-swiper></team-swiper>
+        <team-tree></team-tree>
       </div>
       <index-footer></index-footer>
     </div>
@@ -15,26 +13,22 @@
 </template>
 
 <script>
-import IndexHeader from './computed/head'
-import IndexLayout from './computed/layout'
-import IndexGlobal from './computed/global'
-import IndexArch from './computed/arch'
-import IndexFooter from './computed/footer'
-import IndexSwiper from './computed/swiper'
+import IndexHeader from '../../views/index/computed/head'
+import TeamSwiper from './computed/swiper'
+import TeamTree from './computed/tree'
+import IndexFooter from '../../views/index/computed/footer'
 export default {
   name:'Home',
   components:{
     IndexHeader,
-    IndexLayout,
-    IndexGlobal,
-    IndexArch,
+    TeamSwiper,
+    TeamTree,
     IndexFooter,
-    IndexSwiper
   }
 }
 </script>
 <style lang="less">
-  .wrap{
+  .team-wrap{
     width: 100%;
     overflow: hidden;
     position: relative;
@@ -43,14 +37,13 @@ export default {
       width: 100%;
       height: 346px;
       position: absolute;
-      left: 20px;
+      left: 0px;
       top: 120px;
-      // z-index: 12;
       background: url(../../assets/imgs/NAIL.png) no-repeat;
-      background-size: 640px 183px;
+      background-size: 1100px 346px;
     }
     .index{
-      width: 100%;
+      width: 1500px;
       height: 100%;
       background: #fff;
       margin: 0 auto;

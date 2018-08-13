@@ -14,7 +14,10 @@
                 <img src="../../../assets/imgs/btc.png" alt="">
             </swiper-slide>
             <swiper-slide class="swiper-slider">
-                 <img class="facebook" src="../../../assets/imgs/facebook.png" alt="">
+                <div class="swiper-title1">Pan-ecology </div>
+                <div class="swiper-title2">Blockchain Hatching Alliance </div>
+                <div class="swiper-des">To Build Digital Currency World in the Global Finance Center</div>
+                <img src="../../../assets/imgs/btc.png" alt="">
             </swiper-slide>
             <div class="swiper-pagination"  slot="pagination"></div>
         </swiper>
@@ -37,56 +40,69 @@ export default{
 </script>
 <style lang="less">
      .con-swiper{
-        width: 100%;
-        height: 508px;
-        padding:  0 60px;
+        height: 400px;
         box-sizing: border-box;
         background:  #3b3b3b ;
         h3{
-            width: 69px;
+            width: 74px;
             height: 28px;
             color: #fff;
-            font: 18px/28px "微软雅黑";
+            font: 26px/28px "微软雅黑";
             transform: rotate(-90deg);
             position: absolute;
-            top: 310px;
+            top: 350px;
+            left: 12px;
             span{
                 color: #646464;
             } 
         }
         .logo{
             width: 28px;
-            height: 100%;
-            margin-left: 24px;
-            padding-top: 310px;
             float: left;
+            padding-top: 280px;
+            position: absolute;
+            left: 36px;
             img{
+                width: 26px;
+                height: 26px;
                 margin-bottom: 12px;
             }
         }
         .swiper-container{
-            width: 1040px;
-            height: 500px;
+            width: 100%;
+            height: 400px;
             box-sizing: border-box;
-            padding-top: 116px;
-            margin-left: 208px;
+            position: absolute;
             .swiper-slider{
-                width: 640px;
-                height: 120px;
+                width: 100%;
                 color: #fff;
-                font: 42px/66px "微软雅黑";
+                padding-top: 54px;
+                padding-left: 47px;
+                box-sizing: border-box;
+                font: 32px/48px "微软雅黑";
+                .title1{
+                    width: 446px;
+                    margin-left: 48px;
+                    margin-top: 54px;
+                }
+                .title2{
+                    width: 446px;
+                }
                 img{
+                    width: 196px;
+                    height: 196px;
                     position: absolute;
-                    left: 700px;
-                    top: 40px;
+                    left: 500px;
+                    top: 54px;
                 }
                 .swiper-des{
-                    width: 310px;
-                    height: 90px;
+                    width: 326px;
+                    padding-left: 20px;
+                    margin-left: 120px;
                     margin-top: 80px;
-                    margin-left: 160px;
                     color: #909090;
-                    font: 24px/38px "微软雅黑";
+                    font: 26px/30px "微软雅黑";
+                    border-left: 2px solid #757575;
                 }
             }
             .swiper-pagination{

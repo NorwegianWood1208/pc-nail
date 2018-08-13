@@ -31,15 +31,14 @@ export default {
 <style lang="less">
     .con-Architecture{
         width: 100%;
-        height: 790px;
-        padding: 52px 60px 0 208px;
+        height: 1200px;
         box-sizing: border-box;
         background: #fff;
         .sanjiao{
             width: 18px;
             height: 16px;
-            margin-left: 570px;
-            margin-bottom: 50px;
+            margin: 0 auto;
+            display: block;
         }
         .title{
             text-align: center;
@@ -47,10 +46,12 @@ export default {
         }
         .Arch-con{
             width: 100%;
-            height: 590px;
+            height: 1200px;
             overflow: hidden;
+            padding: 0 40px 0 40px;
+            box-sizing: border-box;
             .con-lis{
-                width: 523px;
+                width: 100%;
                 height: 287px;
                 margin-right: 80px;
                 float: left;
@@ -61,6 +62,8 @@ export default {
                     box-sizing: border-box;
                     font: 18px/42px "微软雅黑";
                     img{
+                        width: 55px;
+                        height: 55px;;
                         margin-right: 22px;
                         margin-top: -18px;
                     }
