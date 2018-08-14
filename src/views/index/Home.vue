@@ -43,14 +43,13 @@ export default {
       width: 100%;
       height: 346px;
       position: absolute;
-      left: 20px;
+      left: 700px;
       top: 120px;
-      // z-index: 12;
       background: url(../../assets/imgs/NAIL.png) no-repeat;
-      background-size: 640px 183px;
+      background-size: 1100px 346px;
     }
     .index{
-      width: 100%;
+      width: 1500px;
       height: 100%;
       background: #fff;
       margin: 0 auto;

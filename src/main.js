@@ -10,16 +10,9 @@ Vue.config.productionTip = false;
 Vue.prototype.$echarts = echarts 
 import VueI18n from 'vue-i18n'
 import i18n from './lang/index' 
-import 'lib-flexible/flexible.js'
 // import zh_CN from 'vee-validate/dist/locale/zh_CN'
 Vue.use(VueI18n);
-window.onresize = setHtmlFontSize;
-function setHtmlFontSize(){
-    const htmlWidth = document.documentElement.clientWidth || document.body.clientWidth;
-    const htmlDom = document.getElementsByTagName('html')[0];
-    htmlDom.style.fontSize = htmlWidth / 10 + 'px';
-}
-setHtmlFontSize();
+
 Vue.use(VueAwesomeSwiper)
 new Vue({
   router,

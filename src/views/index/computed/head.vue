@@ -3,17 +3,18 @@
         <h1>NAIL</h1>
         <div class="float-right">
             <nav class="nav">
-            <div class="lis">{{$t("download")}}</div>
-            <div class="lis">财产</div>
-            <div class="lis">介绍</div>
+                <!-- <div class="lis">{{$t("home")}}</div> -->
+                <!-- <div class="lis">{{$t("Assets")}}</div>
+                <div class="lis">{{$t("Introduction")}}</div> -->
             </nav>
-            <div class="lis-login">
-            <div class="login">登录/</div>
-            <div class="register">注册</div>
-            </div>
+            <!-- <div class="lis-login">
+                <div class="login">{{$t("Login")}}/</div>
+                <div class="register">{{$t("Register")}}</div>
+            </div> -->
             <select class="lange" @change="handchange($event)" ref="aaa">
                 <option class="desfont" v-for="(index,value) in langu" :value="value" :key="value">{{index}}</option>
             </select>
+            <img src="../../../assets/imgs/xiala.png" alt="">
         </div>
     </header>
 </template>
@@ -26,8 +27,6 @@ export default{
           langu:{
             zh:"中文",
             en:"English",
-            ru:"русский",
-            ko:"한국어",
             ja:"日本語"
           },
       }
@@ -50,55 +49,66 @@ export default{
 <style lang="less">
     .head{
         width: 100%;
-        height: 128px;
+        height: 63px;
+        padding-top: 14px;
         box-sizing: border-box;
         background: #3b3b3b;
         h1{
-            height: 128px;
+            width: 81px;
+            height: 49px;
             float: left;
             color: #757575;
-            margin-left: 20px;
-            font: 48px/128px "华文细黑";
+            font: 26px/49px "华文细黑";
         }
         .float-right{
             float: right;
-            margin-top: 28px;
+            position: relative;
             .nav{
-                overflow: hidden;
+            overflow: hidden;
+            float: left;
+            color: #757575;
+            margin-left: 620px;
+            .lis{
+                font: 18px/34px "华文细黑";
                 float: left;
-                color: #757575;
-                margin-right: 20px;
-                .lis{
-                    width: 69px;
-                    font: 28px/68px "华文细黑";
-                    float: left;
-                    text-align: center;
-                    margin: 0 20px;
-                }
-                .lis:hover{
-                    border-bottom: 1px solid #757575;
-                }
+                text-align: center;
+                margin:  0 40px;
+                border-bottom: 1px solid #757575;
+            }
             }
             .lis-login{
-                overflow: hidden;
+            overflow: hidden;
+            padding:  0 40px;
+            float: left;
+            font: 18px/34px "华文细黑";
+            color: #757575;
+            .login{
                 float: left;
-                font: 28px/68px "华文细黑";
-                    color: #757575;
-                    .login{
-                        float: left;
-                    }
-                    .register{
-                        float: left;
-                    }
+            }
+            .register{
+                float: left;
+            }
             }
             .lange{
-                background: transparent;
+                font-size: 16px;
                 float: right;
-                margin-left: 20px;
                 color: #b9bcc3;
                 text-align: center;
-                font: 28px/68px "微软雅黑";
+                margin-right: 40px;
+                background: #3b3b3b;
+                font: 16px/34px "微软雅黑";
                 -webkit-appearance: none; /*for chrome*/
+                .desfont{
+                    background: #3b3b3b;
+                    border: none;
+                }
+            }
+            img{
+                width: 10px;
+                height: 5px;
+                position: absolute;
+                right: 20px;;
+                top: 15px;
             }
         }
     }

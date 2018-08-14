@@ -1,6 +1,6 @@
 <template>
     <div class="con-swiper">
-        <h3><span>Offi</span>cial</h3>
+       <h3><span>{{$t("Offcial1")}}</span>{{$t("Offcial2")}}</h3>
         <div class="logo">
             <img class="facebook" src="../../../assets/imgs/facebook.png" alt="">
             <img class="tw1" src="../../../assets/imgs/推特_twitter43.png" alt="">
@@ -8,15 +8,15 @@
         </div>
         <swiper :options="swiperOption" class="swiper-container">
             <swiper-slide class="swiper-slider">
-                <div class="swiper-title1">Pan-ecology </div>
-                <div class="swiper-title2">Blockchain Hatching Alliance </div>
-                <div class="swiper-des">To Build Digital Currency World in the Global Finance Center</div>
+                <div class="swiper-title1">{{$t("ecology")}}</div>
+                <div class="swiper-title2">{{$t("Alliance")}}</div>
+                <div class="swiper-des">{{$t("Digital")}}</div>
                 <img src="../../../assets/imgs/btc.png" alt="">
             </swiper-slide>
             <swiper-slide class="swiper-slider">
-                <div class="swiper-title1">Pan-ecology </div>
-                <div class="swiper-title2">Blockchain Hatching Alliance </div>
-                <div class="swiper-des">To Build Digital Currency World in the Global Finance Center</div>
+                <div class="swiper-title1">{{$t("ecology")}}</div>
+                <div class="swiper-title2">{{$t("Alliance")}}</div>
+                <div class="swiper-des">{{$t("Digital")}}</div>
                 <img src="../../../assets/imgs/btc.png" alt="">
             </swiper-slide>
             <div class="swiper-pagination"  slot="pagination"></div>
@@ -40,73 +40,71 @@ export default{
 </script>
 <style lang="less">
      .con-swiper{
-        height: 400px;
+        width: 100%;
+        height: 508px;
+        padding:  0 60px;
         box-sizing: border-box;
         background:  #3b3b3b ;
         h3{
-            width: 74px;
+            width: 69px;
             height: 28px;
             color: #fff;
-            font: 26px/28px "微软雅黑";
+            font: 18px/28px "微软雅黑";
             transform: rotate(-90deg);
             position: absolute;
-            top: 350px;
-            left: 12px;
+            top: 310px;
             span{
                 color: #646464;
             } 
         }
         .logo{
             width: 28px;
+            height: 100%;
+            margin-left: 24px;
+            padding-top: 310px;
             float: left;
-            padding-top: 280px;
-            position: absolute;
-            left: 36px;
             img{
-                width: 26px;
-                height: 26px;
                 margin-bottom: 12px;
             }
         }
         .swiper-container{
-            width: 100%;
-            height: 400px;
+            width: 1040px;
+            height: 500px;
             box-sizing: border-box;
-            position: absolute;
+            padding-top: 116px;
+            margin-left: 208px;
             .swiper-slider{
-                width: 100%;
+                width: 640px;
+                height: 120px;
                 color: #fff;
-                padding-top: 54px;
-                padding-left: 47px;
-                box-sizing: border-box;
-                font: 32px/48px "微软雅黑";
-                .title1{
-                    width: 446px;
-                    margin-left: 48px;
-                    margin-top: 54px;
-                }
-                .title2{
-                    width: 446px;
-                }
+                font: 42px/66px "微软雅黑";
                 img{
-                    width: 196px;
-                    height: 196px;
                     position: absolute;
-                    left: 500px;
-                    top: 54px;
+                    left: 700px;
+                    top: 40px;
                 }
                 .swiper-des{
-                    width: 326px;
-                    padding-left: 20px;
-                    margin-left: 120px;
+                    width: 310px;
+                    height: 90px;
                     margin-top: 80px;
+                    margin-left: 160px;
                     color: #909090;
-                    font: 26px/30px "微软雅黑";
-                    border-left: 2px solid #757575;
+                    font: 24px/38px "微软雅黑";
                 }
             }
             .swiper-pagination{
                 text-align: right;
+                .swiper-pagination-bullet{
+                    border-radius: 0;
+                    width: 40px;
+                    height: 3px;;
+                }
+                .swiper-pagination-bullet{
+                    background: #969696;
+                }
+                .swiper-pagination-bullet-active{
+                    background: #969696;
+                }
             }
         }
     }

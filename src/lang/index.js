@@ -2,9 +2,7 @@ import Vue from 'vue'
 import VueI18n from 'vue-i18n'
 import zh from '../lang/zh.js'
 import en from '../lang/en.js'
-import ko from '../lang/ko'
-import ja from '../lang/ja'
-import ru from '../lang/ru'
+import ja from '../lang/ja.js'
 // import Cookies from 'js-cookie'
 
 Vue.use(VueI18n)
@@ -24,8 +22,6 @@ const i18n = new VueI18n({
   messages: {
     'zh': zh,
     'en': en,
-    'ko': ko,
-    'ru': ru,
     'ja': ja
   } // set locale messages
 })
